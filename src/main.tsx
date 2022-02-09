@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./i18n";
+import "bulma/css/bulma.min.css";
 
 import App from "./App";
 

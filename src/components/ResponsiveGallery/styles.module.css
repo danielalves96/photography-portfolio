@@ -1,0 +1,17 @@
+.imgZoom {
+    overflow: hidden;
+    display: inline-block;
+    max-height: 100%;
+    transition: transform 0.5s ease;
+}
+
+.imgZoom:hover {
+    transform:scale(1.01);
+    -ms-transform:scale(1.01); /* IE 9 */
+    -moz-transform:scale(1.01); /* Firefox */
+    -webkit-transform:scale(1.01); /* Safari and Chrome */
+    -o-transform:scale(1.01); /* Opera */
+
+    filter: brightness(0.9);
+  }
+  
