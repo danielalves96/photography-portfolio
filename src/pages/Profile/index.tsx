@@ -1,5 +1,6 @@
 import { Header } from "../../components/Header";
 import { Sidebar } from "../../components/Sidebar";
+import { Spacer } from "../Gallery/styles";
 import { Container, Content, Main } from "./styles";
 
 export function Profile() {
@@ -9,6 +10,7 @@ export function Profile() {
         <Main>
             <Container>
                 <Header />
+                <Spacer />
                 <Sidebar />
                 <div className="animate__delay-1s animate__animated animate__fadeIn animate__slow">
                     <Content>

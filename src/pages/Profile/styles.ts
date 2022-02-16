@@ -28,6 +28,7 @@ export const Content = styled.div`
     align-items: flex-start;
 
     h1 {
+        margin-top: 1.5rem;
         font-size: 3rem;
         color: #333;
         font-weight: bold;
