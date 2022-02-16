@@ -5,7 +5,8 @@ export const Container = styled.div`
     justify-content: center;
     align-items: center;
     gap: 2.2rem;
-    margin-top: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
 
     a {
         &:hover {
