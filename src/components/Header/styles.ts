@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    background-color: #f5f5f5;
-    border-radius: 4px;
+    background-color: #181818;
     position: relative;
     padding: 1rem 1.5rem 1rem 1.5rem;
     display: flex;
@@ -21,6 +20,7 @@ export const Container = styled.div`
 export const Controls = styled.div`
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     @media (max-width: 790px) {
         width: -webkit-fill-available;

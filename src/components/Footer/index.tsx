@@ -8,7 +8,7 @@ export function Footer() {
     return (
         <Container className="animate__animated animate__fadeIn animate__slow ">
             <span>
-                © {t(`footer.DEVELOPED_BY`)} <strong>Daniel L. Alves</strong> @
+                © {t(`footer.DEVELOPED_BY`)} <b>Daniel L. Alves</b> @
                 {new Date().getFullYear()}
             </span>
         </Container>

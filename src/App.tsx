@@ -1,7 +1,16 @@
+import React from "react";
+
 import { AppRoutes } from "./Routes";
+import GlobalStyle from "./styles/global";
+import { Main } from "./styles/main";
 
 function App() {
-    return <AppRoutes />;
+    return (
+        <Main>
+            <GlobalStyle />
+            <AppRoutes />
+        </Main>
+    );
 }
 
 export default App;

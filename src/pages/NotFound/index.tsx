@@ -1,14 +1,16 @@
-import React from "react";
-
-import { Header } from "../../components/Header";
-
-// import { Container } from './styles';
+import { NotFoundCss } from "./styles";
 
 export function NotFound() {
     return (
-        <>
-            <Header />
-            <h1>Não encontrado</h1>
-        </>
+        <NotFoundCss>
+            <div>
+                <span>ERRO 404 | PÁGINA NÃO ENCONTRADA.</span>
+                <br />
+                <br />
+                <a href="/" className="button is-dark">
+                    Voltar ao início
+                </a>
+            </div>
+        </NotFoundCss>
     );
 }
