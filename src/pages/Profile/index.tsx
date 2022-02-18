@@ -1,11 +1,31 @@
+import { useEffect, useState } from "react";
+
 import { Header } from "../../components/Header";
 import { Sidebar } from "../../components/Sidebar";
+import { supabase } from "../../supabase";
 import { Spacer } from "../Gallery/styles";
 import { Container, Content, Main } from "./styles";
 
 export function Profile() {
-    const biography = `Pós-graduado em fotografia (Lato Sensu), formado em Processos Fotográficos, além de cursos de extensão de arte, técnica, fotografia básica e avançada, Photoshop avançado e fotografia de retratos, exerço a profissão desde 2013. Anteriormente formado em Técnico em Mecânica Industrial e Tecnologia em Mecatrônica Industrial, com 3 anos de atuação na área, surgiu-me a paixão pela arte e pela fotografia, assim como a vontade de me aprofundar o máximo possível nela para transforma-la em profissão.
-    Entre ensaios, casamentos, gastronomia, arquitetura, festas e mais de 300 espetáculos teatrais fotografados, me tornei empreendedor, atuo como fotógrafo, editor avançado de imagens e vídeos, aplicando no meu trabalho a arte em sua forma mais orgânica e intensa. Sigo na busca pelo aprimoramento da minha sensibilidade artística e minha técnica, tendo como objetivo o reconhecimento através de minhas obras e tornar-me professor para formar mais artistas que valorizem verdadeiramente a fotografia.`;
+    const [biography, setBiography] = useState(``);
+
+    async function getBiography() {
+        const { data, error } = await supabase.from(`biography`).select();
+
+        if (data) {
+            console.log(data);
+            setBiography(data[0].biography);
+        }
+
+        if (error) {
+            console.log(error);
+        }
+    }
+
+    useEffect(() => {
+        getBiography();
+    }, []);
+
     return (
         <Main>
             <Container>

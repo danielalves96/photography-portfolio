@@ -3,7 +3,6 @@
 import "animate.css";
 import { useEffect, useState } from "react";
 import { TailSpin } from "react-loader-spinner";
-
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import ResponsiveGallery from "react-responsive-gallery";
 
