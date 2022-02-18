@@ -1,5 +1,6 @@
 import { Footer } from "../../components/Footer";
 import { Header } from "../../components/Header";
+import { NewGallery } from "../../components/NewGallery/index.jsx";
 import { ResposiveGallery } from "../../components/ResponsiveGallery/index.jsx";
 import { Sidebar } from "../../components/Sidebar";
 
@@ -8,7 +9,8 @@ export function Gallery() {
         <div>
             <Header />
             <Sidebar />
-            <ResposiveGallery />
+            {/* <ResposiveGallery /> */}
+            <NewGallery />
             <Footer />
         </div>
     );

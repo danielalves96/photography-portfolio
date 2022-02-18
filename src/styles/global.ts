@@ -45,6 +45,13 @@ export default createGlobalStyle`
     
   }
 
+  .ril__image {
+    outline: 2rem solid #fff;
+    outline-offset: -2rem;
+  }
+
+
+
   .bm-burger-button {
     position: fixed;
     width: 36px;
