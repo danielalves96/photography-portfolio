@@ -46,8 +46,8 @@ export default createGlobalStyle`
   }
 
   .ril__image {
-    outline: 2rem solid #fff;
-    outline-offset: -2rem;
+    outline: 1.5rem solid #fff;
+    outline-offset: -1.5rem;
   }
 
 
