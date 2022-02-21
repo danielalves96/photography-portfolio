@@ -83,7 +83,7 @@ export function Sidebar() {
                 to={{ pathname: `/portfolio`, search: `gastronomy` }}
                 onClick={closeSidebar}
             >
-                &nbsp;- GASTRÔNOMIA
+                &nbsp;- GASTRONOMIA
             </Link>
             <Link
                 className="menu-item"
