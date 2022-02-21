@@ -1,50 +1,110 @@
+/* eslint-disable react/jsx-no-bind */
 import { slide as Menu } from "react-burger-menu";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { Link } from "react-router-dom";
 
 import logo from "../../assets/images/png/logoWhite.png";
-import { Title, LogoSpacer, Item, Linked } from "./styles";
+import { Title, LogoSpacer } from "./styles";
 
 export function Sidebar() {
+    function closeSidebar() {
+        const button = document.getElementById(
+            `react-burger-cross-btn`
+        ) as HTMLElement;
+
+        button.click();
+    }
     return (
         <Menu customBurgerIcon={<GiHamburgerMenu />}>
-            <a href="/">
+            <Link to="/">
                 <img src={logo} alt="logo" />
-            </a>
+            </Link>
             <LogoSpacer />
             <Title>TRABALHOS</Title>
-            <Item className="menu-item" href="/portfolio">
+            <Link
+                className="menu-item"
+                to={{ pathname: `/portfolio` }}
+                onClick={closeSidebar}
+            >
+                &nbsp;- TODOS
+            </Link>
+            <Link
+                className="menu-item"
+                to={{ pathname: `/portfolio`, search: `fine_art` }}
+                onClick={closeSidebar}
+            >
                 &nbsp;- FINE ART
-            </Item>
-            <Item className="menu-item" href="/portfolio">
+            </Link>
+            <Link
+                className="menu-item"
+                to={{ pathname: `/portfolio`, search: `studio` }}
+                onClick={closeSidebar}
+            >
                 &nbsp;- ESTÚDIO
-            </Item>
-            <Item className="menu-item" href="/portfolio">
+            </Link>
+            <Link
+                className="menu-item"
+                to={{ pathname: `/portfolio`, search: `external` }}
+                onClick={closeSidebar}
+            >
                 &nbsp;- ENSAIOS EXTERNOS
-            </Item>
-            <Item className="menu-item" href="/portfolio">
+            </Link>
+            <Link
+                className="menu-item"
+                to={{ pathname: `/portfolio`, search: `marriage` }}
+                onClick={closeSidebar}
+            >
                 &nbsp;- CASAMENTOS
-            </Item>
-            <Item className="menu-item" href="/portfolio">
+            </Link>
+            <Link
+                className="menu-item"
+                to={{ pathname: `/portfolio`, search: `pre_wedding` }}
+                onClick={closeSidebar}
+            >
                 &nbsp;- PRÉ CASAMENTO
-            </Item>
-            <Item className="menu-item" href="/portfolio">
+            </Link>
+            <Link
+                className="menu-item"
+                to={{ pathname: `/portfolio`, search: `theater` }}
+                onClick={closeSidebar}
+            >
                 &nbsp;- TEATRO
-            </Item>
-            <Item className="menu-item" href="/portfolio">
+            </Link>
+            <Link
+                className="menu-item"
+                to={{ pathname: `/portfolio`, search: `15yo` }}
+                onClick={closeSidebar}
+            >
                 &nbsp;- 15 ANOS
-            </Item>
-            <Item className="menu-item" href="/portfolio">
+            </Link>
+            <Link
+                className="menu-item"
+                to={{ pathname: `/portfolio`, search: `gastronomy` }}
+                onClick={closeSidebar}
+            >
                 &nbsp;- GASTRÔNOMIA
-            </Item>
-            <Item className="menu-item" href="/portfolio">
+            </Link>
+            <Link
+                className="menu-item"
+                to={{ pathname: `/portfolio`, search: `children` }}
+                onClick={closeSidebar}
+            >
                 &nbsp;- INFANTIL
-            </Item>
-            <Item className="menu-item" href="/portfolio">
+            </Link>
+            <Link
+                className="menu-item"
+                to={{ pathname: `/portfolio`, search: `commertial` }}
+                onClick={closeSidebar}
+            >
                 &nbsp;- COMERCIAL
-            </Item>
+            </Link>
             <LogoSpacer />
-            <Linked href="/about-me">SOBRE MIM</Linked>
-            <Linked href="/contact">CONTATO</Linked>
+            <Link className="linked" to="/about-me">
+                SOBRE MIM
+            </Link>
+            <Link className="linked" to="/contact">
+                CONTATO
+            </Link>
         </Menu>
     );
 }

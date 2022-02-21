@@ -1,14 +1,16 @@
+import "bulma/css/bulma.min.css";
 import React from "react";
 import ReactDOM from "react-dom";
 
 import App from "./App";
-
 import "./i18n";
-import "bulma/css/bulma.min.css";
+import { PhotosProvider } from "./providers/photos.jsx";
 
 ReactDOM.render(
     <React.StrictMode>
-        <App />
+        <PhotosProvider>
+            <App />
+        </PhotosProvider>
     </React.StrictMode>,
     document.getElementById(`root`)
 );
