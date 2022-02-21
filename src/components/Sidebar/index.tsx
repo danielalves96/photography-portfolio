@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-no-bind */
 import { slide as Menu } from "react-burger-menu";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import logo from "../../assets/images/png/logoWhite.png";
 import { Title, LogoSpacer } from "./styles";
@@ -14,6 +14,7 @@ export function Sidebar() {
 
         button.click();
     }
+
     return (
         <Menu customBurgerIcon={<GiHamburgerMenu />}>
             <Link to="/">

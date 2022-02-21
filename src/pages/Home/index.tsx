@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from "react-router-dom";
 
 import Logo from "../../assets/images/png/logoHorizontal.png";
 import { Container, Content, Image, Links, Main } from "./styles";
@@ -13,9 +13,9 @@ export function Home() {
                     </div>
                     <div className="animate__delay-1s animate__animated animate__fadeIn animate__slow">
                         <Links>
-                            <a href="/portfolio">PORTFÓLIO</a>
-                            <a href="/about-me">SOBRE MIM</a>
-                            <a href="/contact">CONTATO</a>
+                            <Link to="/portfolio">PORTFÓLIO</Link>
+                            <Link to="/about-me">SOBRE MIM</Link>
+                            <Link to="/contact">CONTATO</Link>
                         </Links>
                     </div>
                 </Content>
