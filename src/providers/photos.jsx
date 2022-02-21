@@ -1,6 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
 
-import { images } from "../components/ResponsiveGallery/images";
 import { supabase } from "../supabase";
 
 export const PhotosContext = createContext({});
@@ -19,6 +18,10 @@ export function PhotosProvider({ children }) {
         if (data) {
             setPhotos(data.sort(() => Math.random() - 0.5));
             setLoading(true);
+        }
+
+        if (error) {
+            console.error(error);
         }
     }
 

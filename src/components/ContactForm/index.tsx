@@ -1,11 +1,10 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import emailjs from "emailjs-com";
-import { useForm } from "react-hook-form";
-import { ToastContainer, toast } from "react-toastify";
-import LoadingBar from "react-top-loading-bar";
-
-import "react-toastify/dist/ReactToastify.min.css";
 import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.min.css";
+import LoadingBar from "react-top-loading-bar";
 
 import { Button, Container, Title } from "./styles";
 
@@ -43,6 +42,7 @@ export function ContactForm() {
         });
     };
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const onSubmit = async (data: any) => {
         const { name, email, subject, message } = data;
         try {

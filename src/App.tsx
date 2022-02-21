@@ -1,5 +1,3 @@
-import React from "react";
-
 import { AppRoutes } from "./Routes";
 import GlobalStyle from "./styles/global";
 import { Main } from "./styles/main";

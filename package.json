@@ -1,6 +1,6 @@
 {
-  "name": "template-test",
-  "version": "0.1.0",
+  "name": "photography-portfolio",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@supabase/supabase-js": "^1.30.3",
@@ -15,7 +15,6 @@
     "react-hook-form": "^7.27.0",
     "react-i18next": "^11.15.4",
     "react-icons": "^4.3.1",
-    "react-images": "^1.2.0-beta.7",
     "react-loader-spinner": "^5.1.4",
     "react-photo-gallery": "^8.0.0",
     "react-responsive-gallery": "^2.0.1",

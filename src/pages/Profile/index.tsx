@@ -13,12 +13,11 @@ export function Profile() {
         const { data, error } = await supabase.from(`biography`).select();
 
         if (data) {
-            console.log(data);
             setBiography(data[0].biography);
         }
 
         if (error) {
-            console.log(error);
+            console.error(error);
         }
     }
 
