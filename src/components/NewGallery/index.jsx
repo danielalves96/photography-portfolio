@@ -85,6 +85,12 @@ export function NewGallery() {
                 photos.filter((phot) => phot.category === `Comercial`)
             );
         }
+
+        if (search === `?pregnant`) {
+            setDisplayedImages(
+                photos.filter((phot) => phot.category === `Gestante`)
+            );
+        }
     }, [search]);
 
     return (

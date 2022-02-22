@@ -99,6 +99,13 @@ export function Sidebar() {
             >
                 &nbsp;- COMERCIAL
             </Link>
+            <Link
+                className="menu-item"
+                to={{ pathname: `/portfolio`, search: `pregnant` }}
+                onClick={closeSidebar}
+            >
+                &nbsp;- GESTANTE
+            </Link>
             <LogoSpacer />
             <Link className="linked" to="/about-me">
                 SOBRE MIM
